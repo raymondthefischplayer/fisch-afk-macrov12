@@ -31,13 +31,13 @@ AutoBlurCamera := true
 AutoBlurDelay := 50
 
 ; How long to wait after fishing before restarting
-RestartDelay := 1000
+RestartDelay := 2000
 
 ; How long to hold the cast for before releasing
-HoldRodCastDuration := 1000
+HoldRodCastDuration := 2000
 
 ; How long to wait for the bobber to land in water
-WaitForBobberDelay := 1000
+WaitForBobberDelay := 1500
 
 ; Set this to your navigation key, IMPORTANT
 NavigationKey := "\"
@@ -67,11 +67,11 @@ NavigationSpamDelay := 10
 ;     MINIGAME SETTINGS     ====================================================================================================;
 
 ; Bar size is automatically calculated, set manual value to override
-ManualBarSize := 0.2
+ManualBarSize := 254
 ; Seconds for calculation to be considered failed
-BarCalculationFailsafe := 10
+BarCalculationFailsafe := 1
 ; Color range to scan for initial white bar
-BarSizeCalculationColorTolerance := 15
+BarSizeCalculationColorTolerance := 20
 
 ; Color range to scan for minigame white bar
 WhiteBarColorTolerance := 5
@@ -394,7 +394,7 @@ if (AutoEnableCameraMode == true)
 		send {%NavigationKey%}
 		tooltip, Action: Press %NavigationKey%, %TooltipX%, %Tooltip8%, 8
 		sleep %AutoCameraDelay%
-		loop, 10
+		loop, 100
 			{
 			rightcounter++
 			tooltip, Right Count: %rightcounter%/10, %TooltipX%, %Tooltip9%, 9
